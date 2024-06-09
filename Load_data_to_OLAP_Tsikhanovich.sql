@@ -4,7 +4,7 @@ CREATE EXTENSION IF NOT EXISTS postgres_fdw;
 -- Creating an external server that connects to ‘oltp’
 CREATE SERVER oltp_server
     FOREIGN DATA WRAPPER postgres_fdw
-    OPTIONS (host 'localhost', dbname '01', port '5432');
+    OPTIONS (host 'localhost', dbname 'DWH', port '5432');
 
 -- Creating a custom display for the current user
 CREATE USER MAPPING FOR CURRENT_USER
